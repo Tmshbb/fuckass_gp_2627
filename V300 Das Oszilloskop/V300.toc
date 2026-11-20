@@ -1,0 +1,12 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Durchführung}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Das Oszilloskop}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Aufbau der Leiterplatte}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Versuchsdurchführung}{3}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Messung einer Sinusschwingung mit fester Frequenz}{4}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Messung einer Sinusschwingung mit variabler Amplitude}{4}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Der Gleichrichter}{4}{subsubsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.4}Gleichstrommessung}{4}{subsubsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.5}Signal mit variabler Frequenz}{5}{subsubsection.1.3.5}%
+\contentsline {section}{\nonumberline Literatur}{6}{section*.3}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

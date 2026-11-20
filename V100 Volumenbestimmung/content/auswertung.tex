@@ -1,0 +1,196 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+
+Zuerst wird das Volumen über die Berechnung der einzelnen Formen des Körpers bestimmt, danach über die Überlaufmethode.
+
+\subsection{Messungen}
+
+Die Abmessungen des unregelmäßigen Körpers wurden mit einem Messschieber (Geräteunsicherheit $\Delta x_{\text{Gerät}} = \pm0,05\unit{\mm}$) bestimmt. Regelmäßige Längen wurden einmalig gemessen, sodass hier einzig die Geräteunsicherheit eingeht.
+
+Durch Messen des unregelmäßigen Körpers wurden folgende Werte berechnet:
+
+\begin{table}[H]
+	\centering
+	\caption{Messdaten des unregelmäßigen Körpers}
+	\label{tab:messdaten}
+	\begin{tblr}{
+			rowsep = 4pt, % Erhöht den vertikalen Zeilenabstand (Tabelle wird höher)
+			colsep = 6pt, % Erhöht den allgemeinen Spaltenabstand
+			colspec = {
+				c S[table-format=2.2] S[table-format=1.2] % Gruppe A: Probe linksbündig (l)
+				c S[table-format=2.2] S[table-format=1.2] % Gruppe B: Probe linksbündig (l)
+				c S[table-format=2.2] S[table-format=1.2] % Gruppe D: Probe linksbündig (l)
+			},
+			column{3,6} = {rightsep = 2em}, % Erzeugt den Abstand zwischen Spalte 3&4 sowie 6&7
+			row{1} = {guard, mode=math},
+			% +- Symbol auf den Trennlinien pro Zeile:
+			vline{3} = {2,3,4,5,6,7,8,9}{text=\clap{$\pm$}}, % Reihe A (Zeilen 2-10)
+			vline{6} = {2,3,4,5,6,7,8}{text=\clap{$\pm$}},    % Reihe B (Zeilen 2-9)
+			vline{9} = {2,3,4,5,6}{text=\clap{$\pm$}},
+		}
+		\toprule
+		\shortstack{Bezeich- \\ nung} & \SetCell[c=2]{c} \shortstack{Messwert \\ in \unit{\mm}} & & \shortstack{Bezeich- \\ nung} & \SetCell[c=2]{c} \shortstack{Messwert \\ in \unit{\mm}} & & \shortstack{Bezeich- \\ nung} & \SetCell[c=2]{c} \shortstack{Messwert \\ in \unit{\mm}} & \\
+		\midrule
+		A1 					& 49.50 & 0.05 & B1 & 11.40 & 0.05 	& $\varnothing$D1 	& 29.75 & 0.05 \\
+		$\varnothing$A2 	& 5.30 	& 0.05 & B2 & 6.90 	& 0.05 	& $\varnothing$D2 	& 15.50 & 0.05 \\
+		$\varnothing$A3 	& 3.00 	& 0.05 & B4 & 5.80 	& 0.05 	& $\varnothing$D3 	& 10.30 & 0.05 \\
+		$\varnothing$A5 	& 4.35 	& 0.05 & B5 & 13.15 & 0.05 	& D4 				& 5.05 & 0.05 \\
+		$\varnothing$A6 	& 3.40 	& 0.05 & B6 & 12.05 & 0.05 	& D5 				& 2.10 & 0.05 \\
+		$\varnothing$A7 	& 6.50 	& 0.05 & B7 & 9.45 	& 0.05 	&    				&       &      \\
+		$\varnothing$A8 	& 12.05 & 0.05 & B8 & 8.05 	& 0.05 	&    				&       &      \\
+		A9 					& 45.15 & 0.05 & 	& 		& 		& 					& 		&       &      \\
+		\bottomrule
+	\end{tblr}
+\end{table}
+
+\noindent Wobei $\varnothing A4$ sowie $B3$ aufgrund der Verrundung des Körpers fehlerbehaftet sind.
+Wiederholtes unabhängiges Messen der Längen ergibt:
+
+\begin{table}[H]
+	\centering
+	\caption{Einzelmessungen der unregelmäßigen Längen $\varnothing A4$ und $B3$}
+	\label{tab:A4B3}
+	\begin{tblr}{
+			colspec = {S[table-format=2.2] S[table-format=1.2]},
+			row{1} = {guard, mode=math},
+		}
+		\toprule
+		\varnothing A4/\unit{\mm} & B3/\unit{\mm} \\
+		\midrule
+		10.05 & 3.20 \\
+		10.00 & 3.05 \\
+		10.00 & 2.15 \\
+		10.10 & 1.95 \\
+		\bottomrule
+	\end{tblr}
+\end{table}
+
+Über die Berechnung des Mittelwerts via
+
+\begin{equation}
+	\label{eq:mittelwert}
+	\overline{x} = \frac{1}{N} \sum_{i=1}^{N} x_i
+\end{equation}
+
+ergibt sich mit den N=4 Einzelmessungen für $\overline{\varnothing A4} \approx 10,04\unit{\mm}$ sowie $\overline{B3} \approx 2,59\unit{\mm}$. Weiterhin wird über
+
+\begin{equation}
+	\label{eq:abweich}
+	s_x = \sqrt{\frac{1}{N-1}\sum_{i=1}^{N}(x_i - \overline{x})^2}
+\end{equation}
+
+die Standardabweichung der Werte berechnet. So ergibt sich $s_{\varnothing A4} \approx 0,05\unit{\mm}$ als auch $s_{B3} \approx 0,63\unit{\mm}$. Nun wird die Standardabweichung des Mittelwerts
+
+\begin{equation}
+	\label{eq:abweich_mittelwert}
+	s_{\overline{x}} = \frac{s_x}{\sqrt{N}}
+\end{equation}
+
+berechnet, was $s_{\overline{\varnothing A4}} \approx 0,02\unit{\mm}$ und $s_{\overline{B3}} \approx 0,31\unit{\mm}$ ergibt. Da es sich bei der Geräteunsicherheit $\Delta x_{\text{Gerät}}$ um eine maximale Fehlergrenze handelt, wird unter Annahme einer Rechteckverteilung die dazugehörige Standardunsicherheit
+
+\begin{equation}
+	u_{\text{Gerät}} = \frac{\Delta x_{\text{Gerät}}}{\sqrt{3}}
+\end{equation}
+
+berechnet. Die Gesamtunsicherheit ergibt sich somit über
+
+\begin{equation}
+	\label{eq:abweich_mittelwert_pm}
+	\Delta x_{ges} = \sqrt{s_{\overline{x}}^2 + u_{\text{Gerät}}^2} =  \sqrt{s_{\overline{x}}^2 + ({\frac{\Delta x{\text{Gerät}}}{\sqrt{3}}})}
+\end{equation}
+
+Dies gibt die Messdaten $\varnothing A4 \approx (10,04\pm0,04)\unit{\mm}$ als auch $B3 \approx (2,59\pm0,32)\unit{\mm}$ aus.
+
+\subsubsection{Volumenberechnung}
+Aus den berechneten Längen wird nun das Volumen berechnet. Dieses wird der Übersichtlichkeit halber in ein oberes Volumen $V_{oben}$ sowie ein unteres Volumen $V_{unten}$ eingeteilt.
+Das obere Volumen $V_{Oben}$ berechnet sich aus der Formel
+\begin{equation}
+	\label{eq:v_oben}
+	V_{Oben} = V_{Zylinder,approx} - \sum_{i=1}^{N} V_{O,i}
+\end{equation}
+während sich das untere Volumen $V_{Unten}$ über
+\begin{equation}
+	\label{eq:v_unten}
+	V_{Unten} = V_{Quader,approx} - \sum_{j=1}^{O} V_{U,j}
+\end{equation}
+wobei $V_{Zylinder,approx}$ und $V_{Quader,approx}$ Approximationen sind. Über die Formel
+\begin{equation}
+	\label{eq:fehler}
+	\Delta F(x_1,...,x_n) = \sqrt{(\frac{\partial F}{\partial x_1}\Delta x_1)^2+...+(\frac{\partial F}{\partial x_n}\Delta x_n)^2}
+\end{equation}
+lässt sich dazu der Fehler $\Delta V$ berechnen.
+
+\begin{table}[H]
+	\centering
+	\caption{Volumen, Formgeometrien und Abweichungen}
+	\label{tab:volumen}
+	\begin{tblr}{
+			rowsep = 3pt,
+			colsep = 5pt,
+			colspec = {
+				c                   
+				l                   
+				l                   
+				S[table-format=5.2]
+				S[table-format=3.2]
+			},
+			row{1} = {guard},
+		}
+		\toprule
+		{Körper} & {Form} & {Relevante Größen} & {$V \,/\, \unit{\mm\cubed}$} & {$\Delta V \,/\, \unit{\mm\cubed}$} \\
+		\midrule
+		$V_{O,1}$ & Doppelter Quader & $a=B7, b=\varnothing D1-\varnothing D2, c=D5$ & 282.79 & 7.04 \\
+		$V_{O,2}$ & Doppelter Quader & $a=B8, b=\frac{\varnothing D1-\varnothing D2}{2}, c=D4$ & 579.31 & 7.36 \\
+		$V_{O,3}$ & Zylinderbohrung & $d=\varnothing D2, h=B1$ & 2151.07 & 16.78 \\
+		$V_{O,4}$ & Zylinderbohrung & $d=\varnothing A7, h=B6-B1$ & 21.57 & 2.37 \\
+		$V_{Zylinder,approx}$ & Vollzylinder & $d=\varnothing D1, h=B6$ & 8376.14 & 44.73 \\
+		$V_{O}$ & Unregelmäßig & siehe \autoref{eq:v_oben} & 5341.40 & 44.71 \\
+		$V_{U,1}$ & Zylinderbohrung & $d=\varnothing A7, h=B5-B4$ & 243.87 & 4.43 \\
+		$V_{U,2}$ & Zylinderbohrung & $d=\varnothing A8, h=B4$ & 661.43 & 7.91 \\
+		$V_{U,3}$ & Zylinderbohrung & $d=\varnothing D3, h=B2$ & 574.93 & 6.97 \\
+		$V_{U,4}$ & Zylinderbohrung & $d=\varnothing A2, h=B5-B2$ & 137.89 & 3.03 \\
+		$V_{U,5}$ & Zylinderbohrung & $d=\varnothing A3, h=B5$ & 92.95 & 3.12 \\
+		$V_{U,6}$ & Zylinderbohrung & $d=\varnothing A6, h=B5$ & 119.41 & 3.54 \\
+		$V_{U,7}$ & Zylinderbohrung & $d=\varnothing A5, h=B5-B3$ & 156.79 & 5.15 \\
+		$V_{U,8}$ & Kegelstumpf & $d_{Deck}=\varnothing A5, d_{Grund}=\varnothing A4,$ $h=B3$ & 111.22 & 13.53 \\
+		$V_{Quader, approx}$ & Quader & $a=A1, b=A9, c=B5$ & 29388.54 & 120.12 \\
+		$V_{U}$ & Unregelmäßig & siehe \autoref{eq:v_unten} & 27290.04 & 121.66 \\
+		\bottomrule
+	\end{tblr}
+\end{table}
+
+Damit ergibt sich für das Gesamtvolumen mit Fehler (siehe \autoref{eq:fehler}) $V_{mess} = (32631,44\pm129,62)\unit{\mm\cubed}$.
+
+\subsection{Überlaufmethode}
+Über die Überlaufmethode wird das Volumen genauer mit einem kleineren Fehler bestimmt. Die Überlaufmethode wurde fünfmal unabhängig voneinander aufeinanderfolgend angewendet.
+Aufgrund der Messskala des Messzylinders beträgt die Geräteunsicherheit dabei $\Delta V_{\mathrm{H_2O}} = \pm0,5\unit{\milli\liter}$.
+\begin{table}[H]
+	\centering
+	\caption{Gemessene Wasser- und Körpervolumina.}
+	\label{tab:volumen_verdraengung}
+	\begin{tblr}{
+			rowsep = 3pt,
+			colsep = 6pt,
+			colspec = {
+				c                   
+				c
+				c
+			},
+			row{1} = {guard, mode=math},
+		}
+		\toprule
+		\text{Messung} & V_{\mathrm{H_2O}} \mathbin{/} \unit{\milli\liter} & V_{\text{Körper}} \mathbin{/} \unit{\mm\cubed} \\
+		\midrule
+		1 & 37,0 $\pm$ 0,5 & 37000 $\pm$ 500 \\
+		2 & 36,0 $\pm$ 0,5 & 36000 $\pm$ 500 \\
+		3 & 36,0 $\pm$ 0,5 & 36000 $\pm$ 500 \\
+		4 & 36,7 $\pm$ 0,5 & 36700 $\pm$ 500 \\
+		5 & 35,9 $\pm$ 0,5 & 35900 $\pm$ 500 \\
+		\bottomrule
+	\end{tblr}
+\end{table}
+
+Aus diesen Werten lassen sich nun Mittelwert (siehe \autoref{eq:mittelwert}) $\overline{V_{\text{Körper}}} = 36320\unit{\mm\cubed}$, Standardabweichung (siehe \autoref{eq:abweich}) $s_{V_{\text{Körper}}} \approx 490\unit{\mm\cubed}$ und daraus folgend Standardabweichung des Mittelwerts (siehe \autoref{eq:abweich_mittelwert}) $s_{\overline{V_{\text{Körper}}}} \approx 220$ berechnen. Mithilfe der Formel des Gesamtfehlers (siehe \autoref{eq:fehler}) ergibt sich nun $\Delta V_{ges} \approx 550\unit{\mm\cubed}$.
+Somit ist das gemittelte Volumen $V_{\text{Überlauf}} = (36320\pm550)\unit{\mm\cubed}$.
+
+% Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!

@@ -1,0 +1,9 @@
+[0] Config.pm:329> INFO - This is Biber 2.22
+[0] Config.pm:332> INFO - Logfile is 'V100.blg'
+[240] biber-MSWIN64:342> INFO - === 
+[333] Biber.pm:421> INFO - Reading 'V100.bcf'
+[471] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[489] bbl.pm:676> INFO - Writing 'V100.bbl' with encoding 'UTF-8'
+[489] bbl.pm:779> INFO - Output to V100.bbl
+[490] Biber.pm:132> WARN - The file 'V100.bcf' does not contain any citations!
+[490] Biber.pm:134> INFO - WARNINGS: 1

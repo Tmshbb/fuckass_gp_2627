@@ -1,0 +1,22 @@
+\section{Diskussion}
+\label{sec:Diskussion}
+
+Im Rahmen des Versuchs wurde das Volumen des unregelmäßigen Körpers auf zwei unabhängige Arten bestimmt: über eine geometrische Zerlegung mittels Schieblehrenmessung ($V_{Mess} = (32\,631,44\pm 129.62)\,\unit{\mm\cubed}$) sowie über die Wasserverdrängung mittels Überlaufmethode ($V_{\text{Überlauf}} = (36\,320\pm 550)\,\unit{\mm\cubed}$).
+
+\subsection{Verträglichkeitsprüfung}
+Zur Überprüfung der Übereinstimmung beider Methoden wird die absolute Differenz der Messergebnisse mit der Summe ihrer Unsicherheiten verglichen:
+\begin{equation}
+	|V_{Mess} - V_{\text{Überlauf}}| = |32\,631{,}44\,\unit{\mm\cubed} - 36\,320\,\unit{\mm\cubed}| = 3\,688{,}56\,\unit{\mm\cubed} \approx 3690\,\unit{\mm\cubed}
+\end{equation}
+Die Summe der Einzelunsicherheiten beträgt $\Delta V_{Mess} + \Delta V_{\text{Überlauf}} = 129{,}62\,\unit{\mm\cubed} + 550\,\unit{\mm\cubed} = 679{,}62\,\unit{\mm\cubed}$.
+
+\noindent Da $|V_{Mess} - V_{\text{Überlauf}}| > \Delta V_{Mess} + \Delta V_{\text{Überlauf}}$, überlappen sich die Unsicherheitsintervalle nicht. Die relative Abweichung zwischen beiden Methoden liegt bei ca. $10{,}2\,\%$. Diese statistisch signifikante Differenz weist auf systematische Einflüsse hin.
+
+\subsection{Fehlerquellenanalyse}
+\begin{itemize}
+	\item \textbf{Modellfehler der geometrischen Methode:} Bei der geometrischen Berechnung wird der unregelmäßige Körper durch ideale Grundkörper (Quader, Zylinder, Kegelstumpf) angenähert. Reale Formabweichungen wie die bei den Messwerten $\emptyset A4$ und $B3$ genannten Verrundungen und Kantenradien lassen sich mathematisch nur schwer vollständig erfassen. Da $V_{Mess} < V_{\text{Überlauf}}$ gilt, wurden durch die Zerlegung systematisch Volumenteile unterschätzt oder Abzugsvolumen zu groß berechnet. Trotz der hohen Ablesegenauigkeit der Schieblehre ($\Delta x_{\text{Gerät}} = 0,05\,\unit{\mm\cubed}$) dominiert hier der methodische Modellfehler, welcher von der Gauß'schen Fehlerfortpflanzung nicht berücksichtigt wird und somit eine zu geringe Gesamtvollständigkeit vortäuscht.
+	\item \textbf{Systematik der Überlaufmethode:} Beim Untertauchen des Körpers im Messzylinder können sich kleine Luftblasen an Vertiefungen oder rauen Oberflächen festsetzen, die das effektiv verdrängte Wasservolumen künstlich erhöhen. Zudem stellt die Skalierungsgenauigkeit des Messzylinders ($\Delta V_{\mathrm{H_2O}} = 0,5\,\unit{\milli\liter}$) die dominante Fehlerquelle dieser Teilmessung dar. Der zufällige Messfehler erklärt die große Abweichung zur geometrischen Methode jedoch nicht allein.
+\end{itemize}
+
+\subsection{Fazit}
+Obwohl die geometrische Methode formal eine deutlich kleinere rechnerische Unsicherheit aufweist ($\pm 129{,}62\,\unit{\mm\cubed}$ gegenüber $\pm 550\,\unit{\mm\cubed})$, ist sie bei komplexen, unregelmäßigen Körpern extrem anfällig für systematische Modellfehler. Die Überlaufmethode erfasst die reale Geometrie inklusive aller Verrundungen grundsätzlich vollständiger.

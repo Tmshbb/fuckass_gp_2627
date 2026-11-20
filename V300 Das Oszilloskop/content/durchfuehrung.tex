@@ -1,0 +1,69 @@
+\section{Durchführung}
+\label{sec:Durchführung}
+
+Auf der Arbeitsfläche stehen ein analoges Oszilloskop und eine Leiterplatte, sowie ein Tastkopf mit Erdungsklemme. Der Tastkopf hat einen integrierten Spannungsteiler, der über einen Schalter zwischen einer Teilung von 1 und 10 wechseln kann.
+
+\subsection{Das Oszilloskop}
+
+\begin{figure}[htbp]
+	\begin{minipage}[c]{0.55\linewidth}
+		Der Versuch wird mit dem analogen Oszilloskop 35 MHz Analog Oscilloscope HM303-6 der Marke Hameg Instruments durchgeführt.
+	\end{minipage}%
+	\hfill
+	\begin{minipage}[c]{0.4\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{images/oszilloskop.png}
+		\caption{Oszilloskop\cite{V300}}
+		\label{fig:oszilloskop}
+	\end{minipage}
+\end{figure}
+
+\subsection{Aufbau der Leiterplatte}
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\includegraphics[width=\linewidth]{images/leiterplatte.png}
+	\caption{Aufbau der Leiterplatte\cite{V300}}
+	\label{fig:platte}
+\end{wrapfigure}
+
+Die vorliegende Leiterplatte (namentlich \enquote{Signal Generator Board}) besteht aus den Abgriffen \Circled{1} bis \Circled{10}, Potentiometern RV1 bis RV3, einem Schalter SW1 zum Wechseln zwischen Einweggleichrichter und Zweiweggleichrichter sowie Widerständen an unterschiedlichen Stellen, wie in \autoref{fig:platte} zu sehen.
+Die Abgriffe \Circled{2} und \Circled{4} dienen hier als Erdungspunkte, an denen die Erdungsklemme befestigt werden kann.
+Es ist möglich, mithilfe des Potentiometers RV1 das ausgehende Sinussignal an \Circled{3} zu verstellen. Weiterhin werden über RV2 und RV3 jeweils die Frequenz und das Puls-Pause-Verhältnis an den Abgriffen \Circled{9} und \Circled{10} angepasst.
+Die Leiterplatte wird über einen Eingang mit einem Wechselstrom von $9\unit{\volt}$ AC betrieben (siehe \autoref{fig:platte} links).\cite{V300}
+
+\subsection{Versuchsdurchführung}
+
+Zuerst wird die Justierung des Oszilloskops durchgeführt. Die Leiterplatte wird hierfür nicht verwendet. Es werden die Messspitze des Tastkopfes auf der Teilereinstellung x1 mit dem Abgriff $0.2\unit{\volt}_{PP}$ des Oszilloskops und die Erdungsklammer an einer Klemme der zwei Eingangsbuchsen am Oszilloskop verbunden. Über die Einstellung des zeitlichen Kanalreglers wird die Darstellung des Spannungsverlaufs angepasst, bis es statisch erscheint. Die Spannungshöhe wird nun mit Grobeinstellung und Feinjustierung angepasst, bis die Peak-to-Peak-Amplitude $U_{PP}$ mit den $0,2\unit{\volt}$ des Abgriffs $0.2\unit{\volt}_{PP}$ übereinstimmt. Zuletzt wird die Feinanpassung der Zeitachse anhand der am Oszilloskop eingestellten Kalibrierungsfrequenz durchgeführt. Die Feineinstellungen werden nach Vollendung der Justierung beibehalten.\cite{V300}
+
+\subsubsection{Messung einer Sinusschwingung mit fester Frequenz}
+
+Im Folgenden wird die Sinusschwingung einer festen Frequenz gemessen. Dazu wird die Messspitze des Tastkopfes an \Circled{1} angeschlossen und an \Circled{2} geerdet. Die Darstellung des Spannungsverlaufs wird wieder angepasst, bis es statisch erscheint. Der Versuch wird dreimal bei unterschiedlichen Einstellungen des Reglers V/DIV wiederholt. Es werden dazu Amplitude und Periode der Darstellung entnommen und daraus die Frequenz $v$
+
+\begin{equation}
+	v = \frac{1}{T}
+\end{equation}
+
+errechnet.\cite{V300}
+
+\subsubsection{Messung einer Sinusschwingung mit variabler Amplitude}
+
+Zur Vermessung der Sinusschwingung unter einer veränderbaren Amplitude wird der Abgriff \Circled{3} verwendet, der mit dem Potentiometer RV1 verbunden ist. Die Messspitze des Tastkopfes wird an \Circled{3} angebracht und die Erdungsklemme wird an \Circled{2} geklemmt. Es soll durch Drehen von RV1 die minimale sowie maximal erreichbare Amplitude von $U_{PP}$ gemessen werden. Im Anschluss wird dies mit dem Schalten des Spannungsteilers auf x10 wiederholt.\cite{V300}
+
+\subsubsection{Der Gleichrichter}
+
+Der Spannungsteiler wird nun auf x1 geschaltet und die Messspitze des Tastkopfes mit \Circled{5} verbunden. Der Tastkopf wird über den Abgriff \Circled{4} geerdet.
+Jetzt muss der Schalter SW1 in die obere Position gebracht werden, damit der Einweggleichrichter aktiv ist. Durch Umstellen der Kanalregler werden nun drei Halbwellen auf dem Oszilloskop dargestellt. Sobald dies erreicht ist, werden die relevanten Einstellungen festgehalten. Mittels des Triggers wird die positive und negative Flanke ausgelöst, die dann skizziert werden.\cite{V300}
+
+Nun wird zu dem Zweiweggleichrichter gewechselt, indem der Schalter SW1 in die untere Position geschaltet wird. Es werden wieder relevante Einstellungen notiert und positive sowie negative Flanke skizziert.\cite{V300}
+
+\subsubsection{Gleichstrommessung}
+
+Zur Messung wird die Messspitze des Tastkopfes zuerst mit dem Abgriff \Circled{6} verbunden, während weiterhin an \Circled{4} geerdet wird. Hierbei wird der Schalter SW1 auf die obere Stellung auf den Einweggleichrichter gestellt, Trigger Mode auf DC geschaltet und der Kanal durch Drücken von GD (Ground) geerdet. Die erkennbare Linie soll auf $0\unit{\volt}$ verlaufen. Jetzt wird durch Drücken von GD die entstandene vertikale Auslenkung gemessen. Daraufhin wird die Messung wiederholt, indem die Messspitze des Tastkopfes mit \Circled{7} und \Circled{8} nacheinander verbunden wird.\cite{V300}
+
+Nun wird die Messspitze des Tastkopfes wieder mit \Circled{6} verbunden. Die Erdungsklemme bleibt an \Circled{4}. Es wird der Trigger Mode auf AC geschaltet, wodurch ein \enquote{Ripple} messbar werden sollte, dessen Amplitude gemessen wird. Durch Umschalten von SW1 auf den Zweiweggleichrichter wird ein unterschiedlicher \enquote{Ripple} gemessen und beide werden verglichen.\cite{V300}
+
+\subsubsection{Signal mit variabler Frequenz}
+
+Zuletzt wird ein Signal mit einer veränderbaren Frequenz vermessen. Dazu wird die Messspitze des Tastkopfes mit Abgriff \Circled{9} verbunden, geerdet wird über Abgriff \Circled{4}.
+Nun sind Frequenz und Puls-Pause-Verhältnis je über RV2 und RV3 veränderbar. Es sollen die Anstiegszeiten der positiven und negativen Flanke abgemessen werden, sowie relevante Einstellungen notiert und die dargestellten Pulsformen skizziert werden.\cite{V300}
