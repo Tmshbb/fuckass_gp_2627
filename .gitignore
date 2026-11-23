@@ -1,1 +1,16 @@
-build
+build/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.minted
+_minted*/
+[Vv][0-9]*/[Vv][0-9][0-9][0-9].pdf
+__pycache__/

@@ -1,7 +1,7 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.11.9)  23 NOV 2026 20:06
- restricted system commands enabled.
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.11.9)  23 NOV 2026 20:13
+ system commands enabled.
  file:line:error style messages enabled.
-**c:/Users/hatem/Documents/Protokolle/fuckass_gp_2627/template/header.tex
+**c:/Users/hatem/Documents/Protokolle/fuckass_gp_2627/template/header
 (c:/Users/hatem/Documents/Protokolle/fuckass_gp_2627/template/header.tex
 LaTeX2e <2026-11-01>
 L3 programming layer <2026-09-09>
@@ -1521,25 +1521,25 @@ Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@b@toks=\toks35
 ) (c:/texlive/2026/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2026/06/26 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 )
 \c@minted@FancyVerbLineTemp=\count555
 \@float@every@listing=\toks36
 \c@listing=\count556
 ))
 ! Emergency stop.
-<*> ...tokolle/fuckass_gp_2627/template/header.tex
+<*> .../Protokolle/fuckass_gp_2627/template/header
                                                   
 *** (job aborted, no legal \end found)
 
 
 
 Here is how much of LuaTeX's memory you used:
- 43249 strings out of 475522
+ 43248 strings out of 475522
  100000,2373549 words of node,token memory allocated 596 words of node memory still in use:
    6 hlist, 1 vlist, 2 rule, 1 dir, 3 glue, 4 kern, 1 glyph, 10 attribute, 71 glue_spec, 7 attribute_list, 1 write, 1 pdf_colorstack nodes
    avail lists: 1:1,2:30,3:3,4:2,5:2,7:26,9:4,11:3
  65697 multiletter control sequences out of 65536+600000
- 50 fonts using 19553203 bytes
- 108i,1n,101p,11269b,2936s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 50 fonts using 19553035 bytes
+ 108i,1n,101p,11265b,2936s stack positions out of 10000i,1000n,20000p,200000b,200000s
 !  ==> Fatal error occurred, no output PDF file produced!

@@ -3,127 +3,116 @@
 
 Das Trägheitsmoment $I$ ist bei Drehbewegungen das Analogon zur trägen Masse $m$ bei Translationsbewegungen.
 Es beschreibt, wie stark sich ein Körper einer Änderung seiner Winkelgeschwindigkeit $\omega$ widersetzt,
-und verknüpft das wirkende Drehmoment $M$ mit der Winkelbeschleunigung über $M = I \cdot \dot{\omega}$.
+und verknüpft bei Drehung um eine feste Achse das wirkende Drehmoment $M$ mit der Winkelbeschleunigung über $M = I \cdot \dot{\omega}$.
 Das Trägheitsmoment einer Punktmasse $m$ im senkrechten Abstand $r$ zur Drehachse ist
-
 \begin{equation}
     I = m \cdot r^2 .
     \label{eq:traegheit1}
 \end{equation}
-
 Besteht ein Körper aus mehreren Massen $m_i$ mit den Abständen $r_i$ zur selben Drehachse, addieren sich die einzelnen Trägheitsmomente zu
-
 \begin{equation}
     I = \sum_i m_i \cdot r_i^2 .
     \label{eq:traegheit2}
 \end{equation}
-
 Für eine kontinuierliche Massenverteilung geht die Summe in das Integral
-
 \begin{equation}
     I = \int r^2 \dif{m} = \int r^2 \rho \dif{V}
     \label{eq:traegheit3}
 \end{equation}
-
-über, wobei $\dif{m} = \rho \dif{V}$ mit der Dichte $\rho$ verwendet wurde.
+über. Dabei ist $r$ der Abstand des Massenelements $\dif{m}$ zur Drehachse und es wurde $\dif{m} = \rho \dif{V}$ mit der Dichte $\rho$ verwendet.
 Für geometrisch einfache, homogene Körper lassen sich so die Trägheitsmomente bezüglich einer Achse durch den Schwerpunkt berechnen.
-Für eine Vollkugel mit Radius $R$ ergibt sich
-
+Für eine Vollkugel mit Radius $R$ ergibt sich (siehe \autoref{fig:koerper})
 \begin{equation}
-    I_\text{Kugel} = \frac{2}{5} m R^2 ,
+    I_\text{Kugel} = \frac{2}{5} m R^2 .
     \label{eq:kugel}
 \end{equation}
-
-für einen Vollzylinder mit Radius $R$ und Höhe $h$ um seine Symmetrieachse bzw. um eine Achse senkrecht dazu (siehe \autoref{fig:zylinder})
-
+Für einen Vollzylinder mit Radius $R$ und Höhe $h$ gilt um seine Symmetrieachse bzw. um eine Achse senkrecht dazu
 \begin{align}
-    I_\text{Zyl,\,\parallel} &= \frac{1}{2} m R^2 , \label{eq:zylinder_laengs} \\
-    I_\text{Zyl,\,\perp}     &= m \left( \frac{R^2}{4} + \frac{h^2}{12} \right) \label{eq:zylinder_quer}
+    I_{\text{Zyl},\parallel} &= \frac{1}{2} m R^2 , \label{eq:zylinder_laengs} \\
+    I_{\text{Zyl},\perp}     &= m \left( \frac{R^2}{4} + \frac{h^2}{12} \right) . \label{eq:zylinder_quer}
 \end{align}
-
-und für einen dünnen Stab der Länge $l$ um eine Achse senkrecht zum Stab
-
-\begin{equation}
-    I_\text{Stab} = \frac{1}{12} m l^2 .
-    \label{eq:stab}
-\end{equation}
-
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{images/zylinder.png}
-    \caption{Trägheitsmoment eines Zylinders um zwei seiner Hauptachsen \cite{V101}.}
-    \label{fig:zylinder}
+    \includegraphics[width=0.7\textwidth]{images/kugel_zylinder.png}
+    \caption{Trägheitsmomente einer Kugel und eines Zylinders um verschiedene Achsen durch den Schwerpunkt \cite{V101}.}
+    \label{fig:koerper}
 \end{figure}
 
 Ist das Trägheitsmoment $I_\text{S}$ bezüglich einer Achse durch den Schwerpunkt bekannt,
 lässt sich das Trägheitsmoment bezüglich jeder dazu parallelen Achse im Abstand $a$ mit dem Satz von Steiner bestimmen:
-
 \begin{equation}
     I = I_\text{S} + m \cdot a^2 .
     \label{eq:steiner}
 \end{equation}
-
 Dabei ist $m$ die Gesamtmasse des Körpers.
-Auf diese Weise lässt sich auch das Trägheitsmoment eines zusammengesetzten Körpers, wie etwa der Modellpuppe,
-abschätzen, indem die Trägheitsmomente der Einzelteile (Zylinder, Kugel) mit \autoref{eq:steiner} auf die Drehachse bezogen und addiert werden.
 
-Greift eine Kraft $\vec{F}$ im Abstand $\vec{r}$ von der Drehachse an einem Körper an, wirkt das Drehmoment
-
+Greift eine Kraft $\vec{F}$ am Ort $\vec{r}$ relativ zur Drehachse an einem Körper an, wirkt das Drehmoment
 \begin{equation}
     \vec{M} = \vec{r} \times \vec{F} .
     \label{eq:drehmoment}
 \end{equation}
-
 In diesem Versuch ist der Körper über eine Spiralfeder mit einem Rahmen verbunden.
 Wird er um den Winkel $\varphi$ aus der Ruhelage ausgelenkt, erzeugt die Feder ein rücktreibendes Drehmoment
-
 \begin{equation}
     M = - D \cdot \varphi ,
     \label{eq:rueckstell}
 \end{equation}
-
 mit der Winkelrichtgröße $D$.
-Da das Rückstellmoment linear im Winkel ist, führt das System harmonische Drehschwingungen mit der Periodendauer
-
+Da das Rückstellmoment linear im Winkel ist, führt das System bei vernachlässigbarer Reibung harmonische Drehschwingungen mit der Periodendauer
 \begin{equation}
     T = 2\pi \sqrt{\frac{I}{D}}
     \label{eq:periodendauer}
 \end{equation}
-
 aus. Das Trägheitsmoment $I$ setzt sich dabei aus dem Trägheitsmoment $I_\text{K}$ des eingespannten Körpers
 und dem Eigenträgheitsmoment $I_\text{D}$ der Drillachse zusammen, $I = I_\text{K} + I_\text{D}$.
 
 Die Winkelrichtgröße wird statisch bestimmt. Steht die Kraft $F$ senkrecht auf dem Hebelarm $r$,
 gilt im Gleichgewicht $F \cdot r = D \cdot \varphi$ und damit
-
 \begin{equation}
-    D = \frac{F \cdot r}{\varphi} .
+    D = \frac{F \cdot r}{\varphi} ,
     \label{eq:winkelrichtgroesse}
 \end{equation}
+wobei $\varphi$ im Bogenmaß einzusetzen ist.
 
-Zur Bestimmung von $I_\text{D}$ wird ein Stab mit zwei gleichen Gewichten der Gesamtmasse $m$
+Zur Bestimmung von $I_\text{D}$ wird ein Stab mit zwei gleichen Gewichten der Gesamtmasse $m_\text{G}$
 symmetrisch im Abstand $a$ zur Drehachse auf die Drillachse gesteckt.
-Mit \autoref{eq:steiner} und \autoref{eq:periodendauer} ergibt sich
-
+Die Gewichte werden als Punktmassen genähert und das Trägheitsmoment des Stabes wird vernachlässigt.
+Mit \autoref{eq:traegheit1} und \autoref{eq:periodendauer} ergibt sich dann
 \begin{equation}
-    T^2 = \frac{4\pi^2}{D} \, I_0 + \frac{4\pi^2 m}{D} \cdot a^2 .
+    T^2 = \frac{4\pi^2}{D} \, I_\text{D} + \frac{4\pi^2 m_\text{G}}{D} \cdot a^2 .
     \label{eq:T2a2}
 \end{equation}
-
-Dabei fasst $I_0 = I_\text{D} + I_\text{Stab} + I_\text{G,S}$ alle vom Abstand $a$ unabhängigen Anteile zusammen,
-wobei $I_\text{G,S}$ das Eigenträgheitsmoment der beiden Gewichte bezüglich ihrer eigenen Schwerpunktsachsen ist.
 \autoref{eq:T2a2} ist linear in $a^2$. Aus einer linearen Regression $T^2 = s \cdot a^2 + t$ folgt aus dem Achsenabschnitt
-
 \begin{equation}
-    I_0 = \frac{t \cdot D}{4\pi^2}
-    \label{eq:I0}
+    I_\text{D} = \frac{t \cdot D}{4\pi^2} .
+    \label{eq:ID}
 \end{equation}
 
-und daraus $I_\text{D} = I_0 - I_\text{Stab} - I_\text{G,S}$.
-
 Sind $D$ und $I_\text{D}$ bekannt, folgt das Trägheitsmoment eines eingespannten Körpers aus seiner Periodendauer zu
-
 \begin{equation}
     I_\text{K} = \frac{T^2 \cdot D}{4\pi^2} - I_\text{D} .
     \label{eq:IK}
 \end{equation}
+
+\subsection{Modell der Puppe}
+\label{sec:puppe}
+
+Für den Vergleich mit dem gemessenen Trägheitsmoment wird die Puppe durch einfache homogene Körper genähert:
+Rumpf, Arme und Beine als Zylinder und der Kopf als Vollkugel.
+Da nur die Gesamtmasse $m_\text{ges}$ der Puppe bekannt ist, wird eine homogene Dichte
+$\rho = m_\text{ges} / V_\text{ges}$ angenommen. Die Masse eines Körperteils folgt dann aus seinem Volumen zu
+\begin{equation}
+    m_i = \rho \cdot V_i \qquad \text{mit} \qquad V_\text{Zyl} = \pi R^2 h , \quad V_\text{Kugel} = \frac{4}{3} \pi R^3 .
+    \label{eq:masse_teil}
+\end{equation}
+Rumpf und Kopf liegen auf der Drehachse, sodass \autoref{eq:zylinder_laengs} bzw. \autoref{eq:kugel} direkt gelten.
+Arme und Beine liegen außerhalb der Drehachse und sind je nach Haltung um einen Winkel $\alpha_i$
+gegen die Drehachse geneigt. Für einen Zylinder, dessen Symmetrieachse den Winkel $\alpha_i$ mit der Drehachse einschließt, gilt
+\begin{equation}
+    I_i = I_{\text{Zyl},\parallel} \cos^2\alpha_i + I_{\text{Zyl},\perp} \sin^2\alpha_i + m_i a_i^2 ,
+    \label{eq:zylinder_schraeg}
+\end{equation}
+wobei $a_i$ der Abstand des Schwerpunkts des Körperteils zur Drehachse ist und der letzte Term dem Steiner-Anteil nach \autoref{eq:steiner} entspricht.
+Für am Körper anliegende Gliedmaßen ist $\alpha_i = 0$, für waagerecht ausgestreckte $\alpha_i = 90^\circ$.
+Da die Gliedmaßen symmetrisch zur Drehachse angeordnet sind, tragen linker und rechter Arm bzw. linkes und rechtes Bein jeweils gleich bei.
+Das Gesamtträgheitsmoment der Puppe ist die Summe der Trägheitsmomente aller Körperteile.
