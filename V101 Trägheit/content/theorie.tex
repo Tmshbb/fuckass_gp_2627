@@ -1,4 +1,129 @@
 \section{Theorie}
 \label{sec:Theorie}
 
-\cite{sample}
+Das Trägheitsmoment $I$ ist bei Drehbewegungen das Analogon zur trägen Masse $m$ bei Translationsbewegungen.
+Es beschreibt, wie stark sich ein Körper einer Änderung seiner Winkelgeschwindigkeit $\omega$ widersetzt,
+und verknüpft das wirkende Drehmoment $M$ mit der Winkelbeschleunigung über $M = I \cdot \dot{\omega}$.
+Das Trägheitsmoment einer Punktmasse $m$ im senkrechten Abstand $r$ zur Drehachse ist
+
+\begin{equation}
+    I = m \cdot r^2 .
+    \label{eq:traegheit1}
+\end{equation}
+
+Besteht ein Körper aus mehreren Massen $m_i$ mit den Abständen $r_i$ zur selben Drehachse, addieren sich die einzelnen Trägheitsmomente zu
+
+\begin{equation}
+    I = \sum_i m_i \cdot r_i^2 .
+    \label{eq:traegheit2}
+\end{equation}
+
+Für eine kontinuierliche Massenverteilung geht die Summe in das Integral
+
+\begin{equation}
+    I = \int r^2 \dif{m} = \int r^2 \rho \dif{V}
+    \label{eq:traegheit3}
+\end{equation}
+
+über, wobei $\dif{m} = \rho \dif{V}$ mit der Dichte $\rho$ verwendet wurde.
+Für geometrisch einfache, homogene Körper lassen sich so die Trägheitsmomente bezüglich einer Achse durch den Schwerpunkt berechnen.
+Für eine Vollkugel mit Radius $R$ ergibt sich
+
+\begin{equation}
+    I_\text{Kugel} = \frac{2}{5} m R^2 ,
+    \label{eq:kugel}
+\end{equation}
+
+für einen Vollzylinder mit Radius $R$ und Höhe $h$ um seine Symmetrieachse bzw. um eine Achse senkrecht dazu (siehe \autoref{fig:zylinder})
+
+\begin{align}
+    I_\text{Zyl,\,\parallel} &= \frac{1}{2} m R^2 , \label{eq:zylinder_laengs} \\
+    I_\text{Zyl,\,\perp}     &= m \left( \frac{R^2}{4} + \frac{h^2}{12} \right) \label{eq:zylinder_quer}
+\end{align}
+
+und für einen dünnen Stab der Länge $l$ um eine Achse senkrecht zum Stab
+
+\begin{equation}
+    I_\text{Stab} = \frac{1}{12} m l^2 .
+    \label{eq:stab}
+\end{equation}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/zylinder.png}
+    \caption{Trägheitsmoment eines Zylinders um zwei seiner Hauptachsen \cite{V101}.}
+    \label{fig:zylinder}
+\end{figure}
+
+Ist das Trägheitsmoment $I_\text{S}$ bezüglich einer Achse durch den Schwerpunkt bekannt,
+lässt sich das Trägheitsmoment bezüglich jeder dazu parallelen Achse im Abstand $a$ mit dem Satz von Steiner bestimmen:
+
+\begin{equation}
+    I = I_\text{S} + m \cdot a^2 .
+    \label{eq:steiner}
+\end{equation}
+
+Dabei ist $m$ die Gesamtmasse des Körpers.
+Auf diese Weise lässt sich auch das Trägheitsmoment eines zusammengesetzten Körpers, wie etwa der Modellpuppe,
+abschätzen, indem die Trägheitsmomente der Einzelteile (Zylinder, Kugel) mit \autoref{eq:steiner} auf die Drehachse bezogen und addiert werden.
+
+Greift eine Kraft $\vec{F}$ im Abstand $\vec{r}$ von der Drehachse an einem Körper an, wirkt das Drehmoment
+
+\begin{equation}
+    \vec{M} = \vec{r} \times \vec{F} .
+    \label{eq:drehmoment}
+\end{equation}
+
+In diesem Versuch ist der Körper über eine Spiralfeder mit einem Rahmen verbunden.
+Wird er um den Winkel $\varphi$ aus der Ruhelage ausgelenkt, erzeugt die Feder ein rücktreibendes Drehmoment
+
+\begin{equation}
+    M = - D \cdot \varphi ,
+    \label{eq:rueckstell}
+\end{equation}
+
+mit der Winkelrichtgröße $D$.
+Da das Rückstellmoment linear im Winkel ist, führt das System harmonische Drehschwingungen mit der Periodendauer
+
+\begin{equation}
+    T = 2\pi \sqrt{\frac{I}{D}}
+    \label{eq:periodendauer}
+\end{equation}
+
+aus. Das Trägheitsmoment $I$ setzt sich dabei aus dem Trägheitsmoment $I_\text{K}$ des eingespannten Körpers
+und dem Eigenträgheitsmoment $I_\text{D}$ der Drillachse zusammen, $I = I_\text{K} + I_\text{D}$.
+
+Die Winkelrichtgröße wird statisch bestimmt. Steht die Kraft $F$ senkrecht auf dem Hebelarm $r$,
+gilt im Gleichgewicht $F \cdot r = D \cdot \varphi$ und damit
+
+\begin{equation}
+    D = \frac{F \cdot r}{\varphi} .
+    \label{eq:winkelrichtgroesse}
+\end{equation}
+
+Zur Bestimmung von $I_\text{D}$ wird ein Stab mit zwei gleichen Gewichten der Gesamtmasse $m$
+symmetrisch im Abstand $a$ zur Drehachse auf die Drillachse gesteckt.
+Mit \autoref{eq:steiner} und \autoref{eq:periodendauer} ergibt sich
+
+\begin{equation}
+    T^2 = \frac{4\pi^2}{D} \, I_0 + \frac{4\pi^2 m}{D} \cdot a^2 .
+    \label{eq:T2a2}
+\end{equation}
+
+Dabei fasst $I_0 = I_\text{D} + I_\text{Stab} + I_\text{G,S}$ alle vom Abstand $a$ unabhängigen Anteile zusammen,
+wobei $I_\text{G,S}$ das Eigenträgheitsmoment der beiden Gewichte bezüglich ihrer eigenen Schwerpunktsachsen ist.
+\autoref{eq:T2a2} ist linear in $a^2$. Aus einer linearen Regression $T^2 = s \cdot a^2 + t$ folgt aus dem Achsenabschnitt
+
+\begin{equation}
+    I_0 = \frac{t \cdot D}{4\pi^2}
+    \label{eq:I0}
+\end{equation}
+
+und daraus $I_\text{D} = I_0 - I_\text{Stab} - I_\text{G,S}$.
+
+Sind $D$ und $I_\text{D}$ bekannt, folgt das Trägheitsmoment eines eingespannten Körpers aus seiner Periodendauer zu
+
+\begin{equation}
+    I_\text{K} = \frac{T^2 \cdot D}{4\pi^2} - I_\text{D} .
+    \label{eq:IK}
+\end{equation}
