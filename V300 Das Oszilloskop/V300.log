@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.25.7 (MiKTeX 26.5) (format=lualatex 2026.10.31)  9 NOV 2026 18:02
+This is LuaHBTeX, Version 1.25.7 (MiKTeX 26.5) (format=lualatex 2026.10.31)  23 NOV 2026 21:45
  restricted system commands enabled.
 **V300.tex
 (./V300.tex
@@ -2100,74 +2100,90 @@ Package microtype Info: Loading generic protrusion settings for font family
 [2
 
 ] (./content/durchfuehrung.tex
-<images/oszilloskop.png, id=40, 1153.30875pt x 636.3775pt>
+<images/oszilloskop.png, id=43, 1153.30875pt x 636.3775pt>
 File: images/oszilloskop.png Graphic file (type png)
 <use images/oszilloskop.png>
-Package luatex.def Info: images/oszilloskop.png  used on input line 15.
+Package luatex.def Info: images/oszilloskop.png  used on input line 20.
 (luatex.def)             Requested size: 167.29967pt x 92.30635pt.
 
-Overfull \hbox (104.56389pt too wide) in paragraph at lines 16--16
+Overfull \hbox (104.56389pt too wide) in paragraph at lines 21--21
 [] [] 
  []
 
-<images/leiterplatte.png, id=43, 406.51875pt x 244.915pt>
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 26.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+[3<./images/oszilloskop.png>]
+Overfull \hbox (1.27365pt too wide) in paragraph at lines 36--37
+[]\TU/lmr/bx/n/10.95 Ho-ri-zon-tal-ab-len-kung (\TU/lmtt/b/n/10.95 TIME/DIV\TU/
+lmr/bx/n/10.95 , \TU/lmtt/b/n/10.95 X-POS\TU/lmr/bx/n/10.95 , \TU/lmtt/b/n/10.9
+5 X-MAGx10\TU/lmr/bx/n/10.95 ): \TU/lmr/m/n/10.95 Der Dreh-schal-ter \TU/lmtt/m
+/n/10.95 TIME/DIV
+ []
+
+<images/leiterplatte.png, id=69, 406.51875pt x 244.915pt>
 File: images/leiterplatte.png Graphic file (type png)
 <use images/leiterplatte.png>
-Package luatex.def Info: images/leiterplatte.png  used on input line 25.
+Package luatex.def Info: images/leiterplatte.png  used on input line 49.
 (luatex.def)             Requested size: 167.29967pt x 100.79323pt.
-[3<./images/oszilloskop.png><./images/leiterplatte.png>] [4]) [5] [6
+[4<./images/leiterplatte.png>] [5]) [6] [7
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20261109180208 CC4FF3A48E19EDF0FC98
+runsystem(latexminted cleantemp  --timestamp 20261123214539 CC4FF3A48E19EDF0FC98
 7FE59FEAB75C)...(Command execution disabled via shell_escape='p').
-
-(./V300.aux)
+ (./V300.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-09-09>
  ***********
+Package rerunfilecheck Info: File `V300.aux' has not changed.
+(rerunfilecheck)             Checksum: 507EB7F62774637720C01DEFAC2825A6;8354.
 
 
-Package rerunfilecheck Warning: File `V300.aux' has changed. Rerun.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: Checksums for `V300.aux':
-(rerunfilecheck)             Before: A7E8CA03589BFCFC53A63269EF74B275;7607
-(rerunfilecheck)             After:  7A2B233CD153E961F16D5037F314200E;7618.
+Package rerunfilecheck Info: File `V300.toc' has not changed.
+(rerunfilecheck)             Checksum: 6005DB5C6F36DF1220522D184E83AB7F;1132.
 
-Package rerunfilecheck Warning: File `V300.toc' has changed. Rerun.
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                V300
+(biblatex)                and rerun LaTeX afterwards.
 
-Package rerunfilecheck Info: Checksums for `V300.toc':
-(rerunfilecheck)             Before: E8971506E2F64BA9733D12750D3C4B5E;1031
-(rerunfilecheck)             After:  D60CB1D8CD40EB06D1409962269B826D;1032.
 Package logreq Info: Writing requests to 'V300.run.xml'.
 
 \openout1 = V300.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 46263 strings out of 475604
+ 46280 strings out of 475604
  100000,2848258 words of node,token memory allocated
- 702 words of node memory still in use:
+ 707 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 1 margin_ke
-rn, 3 glyph, 20 attribute, 78 glue_spec, 11 attribute_list, 1 write nodes
-   avail lists: 1:2,2:877,3:190,4:91,5:476,6:36,7:6401,8:16,9:379,10:33,11:681,1
-2:1
- 68467 multiletter control sequences out of 65536+600000
- 60 fonts using 20869979 bytes
+rn, 3 glyph, 20 attribute, 79 glue_spec, 11 attribute_list, 1 write nodes
+   avail lists: 1:2,2:1057,3:181,4:106,5:587,6:39,7:7131,8:16,9:389,10:33,11:757
+,12:1
+ 68482 multiletter control sequences out of 65536+600000
+ 64 fonts using 21386083 bytes
  113i,8n,104p,11228b,2936s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/users/tkord/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman10
--italic.otf><C:/Users/tkord/AppData/Local/Programs/MiKTeX/fonts/opentype/public/
-lm-math/latinmodern-math.otf><C:/Users/tkord/AppData/Local/Programs/MiKTeX/fonts
-/opentype/public/lm-math/latinmodern-math.otf><c:/users/tkord/appdata/local/prog
-rams/miktex/fonts/opentype/public/lm/lmroman10-bold.otf><c:/users/tkord/appdata/
-local/programs/miktex/fonts/opentype/public/lm/lmroman10-regular.otf><c:/users/t
-kord/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12-regular.ot
-f><c:/users/tkord/appdata/local/programs/miktex/fonts/opentype/public/lm/lmsans1
-0-bold.otf><c:/users/tkord/appdata/local/programs/miktex/fonts/opentype/public/l
-m/lmroman12-bold.otf>
-Output written on V300.pdf (6 pages, 1217848 bytes).
+<c:/users/tkord/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman8-
+regular.otf><c:/users/tkord/appdata/local/programs/miktex/fonts/opentype/public/
+lm/lmroman10-italic.otf><c:/users/tkord/appdata/local/programs/miktex/fonts/open
+type/public/lm/lmmono10-regular.otf><c:/users/tkord/appdata/local/programs/mikte
+x/fonts/opentype/public/lm/lmmonolt10-bold.otf><c:/users/tkord/appdata/local/pro
+grams/miktex/fonts/opentype/public/lm/lmroman10-bold.otf><C:/Users/tkord/AppData
+/Local/Programs/MiKTeX/fonts/opentype/public/lm-math/latinmodern-math.otf><C:/Us
+ers/tkord/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm-math/latinmoder
+n-math.otf><c:/users/tkord/appdata/local/programs/miktex/fonts/opentype/public/l
+m/lmroman10-regular.otf><c:/users/tkord/appdata/local/programs/miktex/fonts/open
+type/public/lm/lmroman12-regular.otf><c:/users/tkord/appdata/local/programs/mikt
+ex/fonts/opentype/public/lm/lmsans10-bold.otf><c:/users/tkord/appdata/local/prog
+rams/miktex/fonts/opentype/public/lm/lmroman12-bold.otf>
+Output written on V300.pdf (7 pages, 1239267 bytes).
 
-PDF statistics: 168 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 1048576)
- 81 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 201 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 1048576)
+ 89 words of extra memory for PDF output out of 10000 (max. 100000000)
 
