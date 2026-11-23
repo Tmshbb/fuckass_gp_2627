@@ -5,15 +5,201 @@ Bevor die Trägheitsmomente der unterschiedlichen Körper berechnet werden könn
 
 \subsection{Bestimmung der Winkelrichtgröße D}
 
-Zur Bestimmung von $D$ wurde die rücktreibende Kraft $F$ bei unterschiedlichen Auslenkungen $\phi$ auf eine leichten Metallstange mit festem Abstand $r = 0,2\unit{\meter}$ zur Drehachse gemessen.
+Zur Bestimmung von $D$ wurde die rücktreibende Kraft $F$ bei unterschiedlichen Auslenkungen $\phi$ auf einer leichten Metallstange mit festem Abstand $r = 0.2\unit{\meter}$ zur Drehachse gemessen.
 
-\begin{table}
+\begin{table}[H]
 	\centering
-	\caption{Messwerte zur Bestimmung der Winkelrichtgröße D}
+	\caption{Messwerte zur Bestimmung der Winkelrichtgröße D.}
 	\label{tab:d}
 	\begin{tblr} {
-		colspec
+		colspec = {S[table-format=1.2] c S[table-format=1.4]}
 	}
-		
+		\toprule
+		{$F/\unit{\N}$} & {$\phi$} & {$D/\unit{\N\meter\radian^{-1}}$} \\
+		\midrule
+		0.04 & 10 & 0.0458 \\
+		0.06 & 20 & 0.0344 \\
+		0.08 & 30 & 0.0306 \\
+		0.10 & 40 & 0.0286 \\
+		0.12 & 50 & 0.0275 \\
+		0.14 & 60 & 0.0267 \\
+		0.14 & 70 & 0.0229 \\
+		0.17 & 80 & 0.0244 \\
+		0.18 & 90 & 0.0229 \\
+		0.19 & 100 & 0.0218 \\
+		\bottomrule
 	\end{tblr}
 \end{table}
+
+Daraus resultiert der folgende Plot.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{../build/v101D.pdf}
+	\caption{Rücktreibende Kraft $F$ in Abhängigkeit von der Auslenkung $\phi$ inklusive Ausgleichsgerade.}
+	\label{fig:d}
+\end{figure}
+
+Die Winkelrichtgröße $D$ wurde über
+
+\begin{equation}
+	M = D \cdot \phi = F \cdot r \implies F(\phi) = \frac{D}{r} \cdot \phi
+\end{equation}
+
+mit einer Ausgleichsrechnung über die Python-Bibliothek SciPy berechnet. \cite{scipy} Somit ergibt sich $D = (0.0241 \pm 0.0009)\unit{\N\meter\radian}^{-1}$.
+
+\subsection{Bestimmung des Eigenträgheitsmoments $I_D$}
+
+Zur Bestimmung des Eigenträgheitsmoments $I_D$ der Drillachse wurden zwei identische Zylinder der Masse $m = 261{,}1\,\unit{\gram}$ symmetrisch im Abstand $a$ zur Drehachse befestigt. Bei konstanter Auslenkung von $\varphi = 180\,\unit{\degree}$ wurde die Periodendauer $T$ für zehn verschiedene Abstände jeweils zweimal gemessen und anschließend gemittelt.
+
+\begin{table}[H]
+	\centering
+	\caption{Gemessene Periodendauern $T_1, T_2$ sowie deren Mittelwerte $\bar{T}$ in Abhängigkeit vom Abstand $a$ der Zylinder zur Drehachse.}
+	\label{tab:steiner}
+	\begin{tblr}{
+			colspec = {S[table-format=2.0] S[table-format=1.4] S[table-format=1.2] S[table-format=1.2] S[table-format=1.3] S[table-format=2.2]}
+		}
+		\toprule
+		{$a / \unit{\centi\meter}$} & {$a^2 / \unit{\meter\squared}$} & {$T_1 / \unit{\second}$} & {$T_2 / \unit{\second}$} & {$\bar{T} / \unit{\second}$} & {$\bar{T}^2 / \unit{\second\squared}$} \\
+		\midrule
+		3 & 0,0009 & 2,32 & 2,20 & 2,260 &  5,11 \\
+		7 & 0,0049 & 3,33 & 3,03 & 3,180 & 10,11 \\
+		9 & 0,0081 & 3,25 & 3,46 & 3,355 & 11,26 \\
+		11 & 0,0121 & 3,70 & 4,11 & 3,905 & 15,25 \\
+		13 & 0,0169 & 4,17 & 4,53 & 4,350 & 18,92 \\
+		15 & 0,0225 & 4,76 & 5,24 & 5,000 & 25,00 \\
+		17 & 0,0289 & 5,35 & 5,76 & 5,555 & 30,86 \\
+		18 & 0,0324 & 5,77 & 6,11 & 5,940 & 35,28 \\
+		25 & 0,0625 & 7,54 & 7,58 & 7,560 & 57,15 \\
+		29 & 0,0841 & 8,47 & 8,56 & 8,515 & 72,51 \\
+		\bottomrule
+	\end{tblr}
+\end{table}
+
+Die Messwerte aus Tabelle~\ref{tab:steiner} sind in Abbildung~\ref{fig:steiner} grafisch dargestellt.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{../build/v101steiner.pdf}
+	\caption{Quadrierte Periodendauer $\bar{T}^2$ in Abhängigkeit vom quadrierten Abstand $a^2$ inklusive linearer Ausgleichsgerade.}
+	\label{fig:steiner}
+\end{figure}
+
+Für das Gesamtträgheitsmoment in dieser Anordnung gilt $I = I_D + 2\,I_{\text{Zylinder}} + I_s$ mit $I_{\text{Zylinder}} = m a^2$ sowie dem Trägheitsmoment des Stabs ($m_s = 96{,}2\,\unit{\gram}$, Radius $r_s = 30\,\unit{\centi\meter}$ bzw. Gesamtlänge $L = 60\,\unit{\centi\meter}$):
+\begin{equation}
+	I_s = \frac{1}{12} m_s L^2 = \frac{1}{3} m_s r_s^2 = 0{,}00289\,\unit{\kilogram\meter\squared}.
+\end{equation}
+Einsetzen in die Schwingungsdauer $T = 2\pi\sqrt{I/D}$ liefert den linearen Zusammenhang
+\begin{equation}
+	T^2(a^2) = \frac{4\pi^2}{D}\left(I_D + I_s + 2 m a^2\right) = \underbrace{\frac{8\pi^2 m}{D}}_{s} \cdot a^2 + \underbrace{\frac{4\pi^2 (I_D + I_s)}{D}}_{t}.
+\end{equation}
+Mithilfe einer linearen Ausgleichsrechnung der Form $y = s \cdot x + t$ ($x = a^2$, $y = \bar{T}^2$) über die Python-Bibliothek SciPy \cite{scipy} ergeben sich die Steigung $s = (813 \pm 20)\,\unit{\second\squared\per\meter\squared}$ sowie der Achsenabschnitt $t = (5{,}91 \pm 0{,}74)\,\unit{\second\squared}$.
+
+Aus dem Achsenabschnitt $t$, der zuvor bestimmten Winkelrichtgröße $D = (0{,}0241 \pm 0{,}0009)\,\unit{\newton\meter\per\radian}$ und dem Stabträgheitsmoment $I_s$ berechnet sich das Eigenträgheitsmoment $I_D$ der Drillachse inklusive Gauß'scher Fehlerfortpflanzung über
+\begin{equation}
+	I_D = \frac{t \cdot D}{4\pi^2} - I_s \quad \text{bzw.} \quad u(I_D) = \frac{1}{4\pi^2} \sqrt{\bigl(D \cdot u(t)\bigr)^2 + \bigl(t \cdot u(D)\bigr)^2}
+\end{equation}
+zu $I_D = (0{,}00072 \pm 0{,}00047)\,\unit{\kilogram\meter\squared}$.
+
+\subsection{Bestimmung der Trägheitsmomente von Kugel und Zylinder}
+
+Es wurden die Trägheitsmomente einer Holzkugel ($m_{\text{K}} = 671{,}0\,\unit{\gram}$, Radius $R_{\text{K}} = 6{,}0\,\unit{\centi\meter}$) sowie eines vertikal montierten Metallzylinders ($m_{\text{Z}} = 898{,}3\,\unit{\gram}$, Durchmesser $d_{\text{Z}} = 8{,}0\,\unit{\centi\meter}$ bzw. Radius $R_{\text{Z}} = 4{,}0\,\unit{\centi\meter}$) untersucht. Dazu wurden beide Körper einzeln auf die Drillachse aufgesetzt, um $\varphi = 180\,\unit{\degree}$ ausgelenkt und ihre Periodendauer $T$ in jeweils fünf Durchgängen zweimal gemessen.
+
+\begin{table}[H]
+	\centering
+	\caption{Gemessene Periodendauern $T_1, T_2$ für die Holzkugel und den vertikalen Metallzylinder bei jeweils fünf Versuchsdurchgängen.}
+	\label{tab:koerper}
+	\begin{tblr}{
+			colspec = {c S[table-format=1.2] S[table-format=1.2] S[table-format=1.2] S[table-format=1.2]},
+			cell{1}{2} = {c=2}{c},
+			cell{1}{4} = {c=2}{c},
+		}
+		\toprule
+		& {Holzkugel} & & {Metallzylinder} & \\
+		\cmidrule[lr]{2-3} \cmidrule[lr]{4-5}
+		{Versuch} & {$T_1 / \unit{\second}$} & {$T_2 / \unit{\second}$} & {$T_1 / \unit{\second}$} & {$T_2 / \unit{\second}$} \\
+		\midrule
+		1 & 1,06 & 1,21 & 1,19 & 1,13 \\
+		2 & 0,99 & 1,14 & 1,32 & 1,21 \\
+		3 & 1,13 & 1,13 & 1,19 & 1,33 \\
+		4 & 1,20 & 1,14 & 1,26 & 1,27 \\
+		5 & 0,99 & 1,21 & 1,19 & 1,33 \\
+		\bottomrule
+	\end{tblr}
+\end{table}
+
+Aus den jeweils $N = 10$ Einzelmessungen aus Tabelle~\ref{tab:koerper} ergeben sich die mittleren Periodendauern inklusive Standardfehler des Mittelwerts zu $\bar{T}_{\text{K}} = (1{,}120 \pm 0{,}026)\,\unit{\second}$ für die Holzkugel und $\bar{T}_{\text{Z}} = (1{,}242 \pm 0{,}022)\,\unit{\second}$ für den Metallzylinder.
+
+Das zu berechnende Trägheitsmoment $I_0$ des jeweiligen Probekörpers berechnet sich über die Schwingungsdauer $T = 2\pi\sqrt{(I_0 + I_D)/D}$ inklusive Gauß'scher Fehlerfortpflanzung über
+\begin{equation}
+	I_0 = \frac{D \cdot \bar{T}^2}{4\pi^2} - I_D, \qquad u_{I_0} = \sqrt{\left(\frac{\bar{T}^2}{4\pi^2}\,u_D\right)^2 + \left(\frac{2 D \bar{T}}{4\pi^2}\,u(\bar{T})\right)^2 + u_{I_D}^2}.
+\end{equation}
+Zum Vergleich ergeben sich die theoretischen Trägheitsmomente der homogenen Körper über
+\begin{equation}
+	I_{\text{K, theo}} = \frac{2}{5} m_{\text{K}} R_{\text{K}}^2 = 0{,}00097\,\unit{\kilogram\meter\squared} \quad \text{bzw.} \quad I_{\text{Z, theo}} = \frac{1}{2} m_{\text{Z}} R_{\text{Z}}^2 = 0{,}00072\,\unit{\kilogram\meter\squared}.
+\end{equation}
+Für die Holzkugel folgt damit experimentell $I_{\text{K, 0}} = (0{,}00004 \pm 0{,}00047)\,\unit{\kilogram\meter\squared}$ und für den Metallzylinder $I_{\text{Z, 0}} = (0{,}00022 \pm 0{,}00047)\,\unit{\kilogram\meter\squared}$. Jedoch sind beide experimentell berechneten Werte nicht sinnvoll, da in beiden Fällen der Fehler das Ergebnis dominiert.
+
+\subsection{Bestimmung des Trägheitsmoments einer Gliederpuppe}
+
+Im letzten Versuchsteil wurde das Trägheitsmoment einer Holzpuppe der Gesamtmasse $m_{\text{ges}} = 146{,}5\,\unit{\gram}$ in zwei unterschiedlichen Körperhaltungen untersucht:
+\begin{enumerate}
+	\item \textbf{Position 1:} Beide Arme sind seitlich ausgestreckt, ein Bein zeigt nach vorne und das andere nach hinten.
+	\item \textbf{Position 2:} Nur die beiden Arme sind seitlich ausgestreckt, während die Beine gerade nach unten ausgerichtet sind.
+\end{enumerate}
+
+Zur theoretischen Modellierung wurden Arme ($i=1$), Beine ($i=2$), Torso ($i=3$) und Kopf ($i=4$) als homogene Vollzylinder mit der gemeinsamen Dichte $\rho = m_{\text{ges}} / V_{\text{ges}}$ angenähert. Die Längen $h_i$ wurden einmalig mit einem Maßband (Skalenteilung $0{,}1\,\unit{\centi\meter}$, Ablesegrenze $a = 0{,}05\,\unit{\centi\meter}$, Rechteckverteilung $u_{\text{Ablese}} = a/\sqrt{3} \approx 0{,}029\,\unit{\centi\meter}$) und die Durchmesser $d_i$ jeweils mehrfach an verschiedenen Stellen bestimmt (Tabelle~\ref{tab:puppe_masse}).
+
+\begin{table}[H]
+	\centering
+	\caption{Gemessene Durchmesser $d_i$ und Höhen $h_i$ der zylindrischen Teilkörper sowie daraus berechnete Einzelvolumina $V_i$ und Einzelmassen $m_i$.}
+	\label{tab:puppe_masse}
+	\begin{tblr}{
+			colspec = {l c S[table-format=1.2] S[table-format=2.2] S[table-format=2.2] S[table-format=2.2]}
+		}
+		\toprule
+		{Körperteil} & {Anzahl} & {$\bar{d}_i / \unit{\centi\meter}$} & {$h_i / \unit{\centi\meter}$} & {$V_i / \unit{\centi\meter\cubed}$} & {$m_i / \unit{\gram}$} \\
+		\midrule
+		Arme ($i=1$)  & 2 & 1,46 & 13,40 & 22,43 & 13,44 \\
+		Beine ($i=2$) & 2 & 1,78 & 15,00 & 37,33 & 22,36 \\
+		Torso ($i=3$) & 1 & 3,48 &  9,90 & 94,16 & 56,40 \\
+		Kopf ($i=4$)  & 1 & 2,70 &  5,40 & 30,92 & 18,52 \\
+		\bottomrule
+	\end{tblr}
+\end{table}
+
+Während Torso und Kopf in beiden Posen um ihre Längsachse rotieren ($I_{3,4} = \frac{1}{2}m_{3,4}R_{3,4}^2$ mit $R_i = \bar{d}_i/2$), liefern die seitlich ausgestreckten Arme ($a_1 = R_3 + h_1/2$) sowie die in Position~1 horizontal ausgestreckten Beine ($a_2 = h_2/2$) jeweils einen Steiner-Beitrag:
+\begin{align}
+	I_{\text{Pos1, theo}} &= 2\left(\frac{1}{4}m_1 R_1^2 + \frac{1}{12}m_1 h_1^2 + m_1 a_1^2\right) + 2\left(\frac{1}{4}m_2 R_2^2 + \frac{1}{12}m_2 h_2^2 + m_2 a_2^2\right) + I_3 + I_4, \\
+	I_{\text{Pos2, theo}} &= 2\left(\frac{1}{4}m_1 R_1^2 + \frac{1}{12}m_1 h_1^2 + m_1 a_1^2\right) + 2\left(\frac{1}{2}m_2 R_2^2 + m_2 R_2^2\right) + I_3 + I_4.
+\end{align}
+Daraus folgen die theoretischen Trägheitsmomente $I_{\text{Pos1, theo}} = (0{,}00058 \pm 0{,}00003)\,\unit{\kilogram\meter\squared}$ und $I_{\text{Pos2, theo}} = (0{,}00025 \pm 0{,}00002)\,\unit{\kilogram\meter\squared}$.
+
+\begin{table}[H]
+	\centering
+	\caption{Gemessene Periodendauern $T_1, T_2$ der Gliederpuppe in beiden Positionen über jeweils fünf Versuchsdurchgänge.}
+	\label{tab:puppe_perioden}
+	\begin{tblr}{
+			colspec = {c S[table-format=1.2] S[table-format=1.2] S[table-format=1.2] S[table-format=1.2]},
+			cell{1}{2} = {c=2}{c},
+			cell{1}{4} = {c=2}{c},
+		}
+		\toprule
+		& {Position 1} & & {Position 2} & \\
+		\cmidrule[lr]{2-3} \cmidrule[lr]{4-5}
+		{Versuch} & {$T_1 / \unit{\second}$} & {$T_2 / \unit{\second}$} & {$T_1 / \unit{\second}$} & {$T_2 / \unit{\second}$} \\
+		\midrule
+		1 & 0,79 & 0,81 & 0,79 & 0,82 \\
+		2 & 0,89 & 0,94 & 0,69 & 0,60 \\
+		3 & 0,94 & 0,93 & 0,68 & 0,75 \\
+		4 & 0,88 & 0,93 & 0,60 & 0,60 \\
+		5 & 0,86 & 0,88 & 0,62 & 0,60 \\
+		\bottomrule
+	\end{tblr}
+\end{table}
+
+	Aus Tabelle~\ref{tab:puppe_perioden} ergeben sich die mittleren Periodendauern $\bar{T}_1 = (0{,}885 \pm 0{,}017)\,\unit{\second}$ für Position~1 und $\bar{T}_2 = (0{,}675 \pm 0{,}027)\,\unit{\second}$ für Position~2. Über $I_0 = \frac{D\bar{T}^2}{4\pi^2} - I_D$ erhält man zunächst $I_{\text{Pos1, 0}} = (-0{,}00025 \pm 0{,}00047)\,\unit{\kilogram\meter\squared}$ und $I_{\text{Pos2, 0}} = (-0{,}00045 \pm 0{,}00047)\,\unit{\kilogram\meter\squared}$. Da das Gesamtträgheitsmoment der Puppe kleiner ist als das zuvor mit der Klemmvorrichtung bestimmte $I_D = (0{,}00072 \pm 0{,}00047)\,\unit{\kilogram\meter\squared}$, führen die Einzelwerte auf unphysikalisch negative Beträge und werden vollständig von $u_{I_D}$ dominiert. Bildet man hingegen die Differenz $\Delta I = I_{\text{Pos1}} - I_{\text{Pos2}}$, hebt sich $I_D$ exakt heraus und man erhält
+\begin{equation}
+	\Delta I_0 = \frac{D}{4\pi^2}\left(\bar{T}_1^2 - \bar{T}_2^2\right) = (0{,}00020 \pm 0{,}00003)\,\unit{\kilogram\meter\squared},
+\end{equation}
+was eine theoretisch erwartete Zunahme von $\Delta I_{\text{theo}} = (0{,}00033 \pm 0{,}00002)\,\unit{\kilogram\meter\squared}$ beim Ausstrecken der Beine erfüllt.
